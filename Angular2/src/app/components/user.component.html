@@ -1,0 +1,89 @@
+
+
+   
+ <div class="container" style="width:98%">
+       
+        <div>Filtering Panel:</div>
+        <div class="well">
+
+          <form class="form-inline">
+           
+            <button type="button" class="btn btn-default" style="margin-left:5px" (click)="getProduct()">Show All</button>
+            <button type="button" class="btn btn-default" (click)="filter()">Price and Rate Filter</button>
+         
+          </form>
+          <br>     
+                 
+
+             <form>
+               <div class="form-group row">
+                 
+                  <div class="col-xs-1">
+                    <label for="minp">MinPrice:</label>
+                    <input class="form-control" name="minp" [(ngModel)]="MinPrice" id="MinPrice" type="text">
+                   </div>
+                  <div class="col-xs-1">
+                   <label for="maxp">MaxPrice:</label>
+                   <input class="form-control" name="maxp" [(ngModel)]="MaxPrice" id="MaxPrice" type="text">
+                  </div>   
+                  
+                  <div class="col-xs-1">
+                    <label for="minr">MinRate:</label>
+                    <input class="form-control" name="minr" [(ngModel)]="MinRate" id="MinRate" type="text">
+                   </div>
+                  <div class="col-xs-1">
+                   <label for="maxr">MaxRate:</label>
+                   <input class="form-control" name="maxr" [(ngModel)]="MaxRate" id="MaxRate" type="text">
+                  </div> 
+                <br>
+                         
+                  <div class="col-xs-3" >
+                    <label for="Attribute" >Choose Fantastic Value:</label>
+                        <select name="Attribute" [(ngModel)]="Attlist"  (ngModelChange)="attfilter()" style="height:33px;border-radius:4px 4px 4px 4px" >
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                    </div>
+              </div>
+               
+             </form>
+
+
+           <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Attribute Fantastic Value</th>
+                        <th>Attribute Fantastic Type</th>
+                        <th>Attribute Fantastic Name</th>
+                        <th>Rating Name</th>
+                        <th>Rating Type</th>
+                        <th>Rating Value</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.sku}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.name}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.price}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.attFanValue}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.attFanType}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.attFanName}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.ratingName}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.ratingType}}</td>
+                        <td class="col-xs-1" style="vertical-align: middle">{{product.ratingValue}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+                    
+        </div>
+
+
+    
+    </div>

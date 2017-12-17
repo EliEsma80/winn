@@ -1,0 +1,5 @@
+C:\Users\Ali\Desktop\winn\WebApplication1\winndatabase\bin\Debug\winndatabase.dacpac
+C:\Users\Ali\Desktop\winn\WebApplication1\winndatabase\bin\Debug\winndatabase.dll
+C:\Users\Ali\Desktop\winn\WebApplication1\winndatabase\bin\Debug\winndatabase.pdb
+C:\Users\Ali\Desktop\winn\WebApplication1\winndatabase\obj\Debug\winndatabase.dll
+C:\Users\Ali\Desktop\winn\WebApplication1\winndatabase\obj\Debug\winndatabase.pdb
